@@ -10,7 +10,6 @@ function arr(a) {
 
 function replaceText(elem, str) {
   elem.textContent = str 
-  return elem
 }
 
 test(
@@ -40,6 +39,11 @@ test(
     );
   },
 );
+
+function addTextTo(elem,str){
+  elem.textContent += str 
+
+}
 
 test(
   'Create a function addTextTo which gets two parameters: an element and a string. The function should append the given string to the content of the given element.',
