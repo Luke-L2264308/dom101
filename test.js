@@ -8,6 +8,11 @@ function arr(a) {
   return Array.prototype.slice.call(a);
 }
 
+function replaceText(elem, str) {
+  elem.textContent = str 
+  return elem
+}
+
 test(
   'Create a function replaceText which accepts two parameters: an element and a string. The function should set the content of the given element to the given string.',
   function (assert) {
