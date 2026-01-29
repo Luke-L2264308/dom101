@@ -11,3 +11,29 @@
 'use strict';
 
 // add your functions here
+function replaceText(elem, str) {
+  elem.textContent = str 
+}
+
+function addTextTo(elem,str){
+  elem.textContent += str 
+
+}
+
+function moreBears(){
+  const animals = document.querySelector('#animals')
+  animals.src = 	"http://placebear.com/400/200"
+  animals.alt = 'A bear.'
+  animals.title = 'A BEAR!'
+}
+
+function setId(elem,str){
+  elem.id = str 
+  return elem
+
+}
+
+function setClass(elem,str){
+  elem.className = str
+  return elem
+}

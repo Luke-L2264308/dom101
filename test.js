@@ -8,9 +8,7 @@ function arr(a) {
   return Array.prototype.slice.call(a);
 }
 
-function replaceText(elem, str) {
-  elem.textContent = str 
-}
+
 
 test(
   'Create a function replaceText which accepts two parameters: an element and a string. The function should set the content of the given element to the given string.',
@@ -40,10 +38,7 @@ test(
   },
 );
 
-function addTextTo(elem,str){
-  elem.textContent += str 
 
-}
 
 test(
   'Create a function addTextTo which gets two parameters: an element and a string. The function should append the given string to the content of the given element.',
@@ -65,12 +60,7 @@ test(
   },
 );
 
-function moreBears(){
-  const animals = document.querySelector('#animals')
-  animals.src = 	"http://placebear.com/400/200"
-  animals.alt = 'A bear.'
-  animals.title = 'A BEAR!'
-}
+
 
 test(
   "Create a function `moreBears` that replaces the default image with the image of a bear.  Your function should (for the 'animals' element) set its source URL to 'http://placebear.com/400/200', its alternative text to 'A bear.', and its title to 'A BEAR!'.",
@@ -91,11 +81,6 @@ test(
   },
 );
 
-function setId(elem,str){
-  elem.id = str 
-  return elem
-
-}
 
 test(
   "Create a function `setId` with two parameters, an element and a string. The function will set the element's ID to the given string. The return value of the function must be the given element.",
@@ -114,10 +99,7 @@ test(
   },
 );
 
-function setClass(elem,str){
-  elem.className = str
-  return elem
-}
+
 
 test(
   "Create a function `setClass` with two parameters, an element and a string. The function will set the element's class to the given string. The return value of the function must be the given element.",
@@ -136,9 +118,8 @@ test(
   },
 );
 
-function addAClass(){
   
-}
+
 
 test(
   "Create a function `addAClass` with two parameters, an element and a string. The function will add the given string's value to the element's classes. The return value of the function must be the given element.",
