@@ -82,3 +82,21 @@ function reverseList(query) {
   // Return the parent element after its children have been reordered.
   return parent;
 }
+// Create a function `mover` that accepts two parameters, the first is a selector for the element to move, the second is a selector for the element that it should be appended to.
+function mover(moveThis,appendToThis){
+  let listToAppendTo = document.querySelector(appendToThis);
+  moveThis = document.querySelector(moveThis);
+  listToAppendTo.append(moveThis);
+  return listToAppendTo;
+}
+
+function filler(list,candidates){
+  
+  for (let i = 0; i < candidates.length; i++) {
+    
+    const li = document.createElement('li');
+    li.textContent = candidates[i];
+    list.append(li);
+  }
+  return list;
+}
