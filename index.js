@@ -37,3 +37,48 @@ function setClass(elem,str){
   elem.className = str
   return elem
 }
+
+function addAClass(elem,str){
+    elem.classList.add(str);
+    return elem;
+}
+
+function removeAClass(elem,str){
+    if (elem.classList.contains(str)) elem.classList.remove(str);
+}
+
+function newElement(name){
+    const elem = document.createElement(name);
+    
+    return elem;
+    
+}
+
+function findElementById(id){
+  return document.querySelector('#' + CSS.escape(id));
+}
+
+function findElementsByQuery(query){
+  return document.querySelectorAll(query);
+}
+
+function reverseList(query) {
+  // Locate the first element that matches the provided CSS selector.
+  // `querySelector` returns a single Element or `null` if none found.
+  const parent = document.querySelector(query);
+
+  // If no matching element exists, return the falsy value (usually `null`).
+  if (!parent) return parent;
+
+  // Convert the parent's live `HTMLCollection` of `children` into a static
+  // array, then reverse the order of that array.
+  const children = Array.from(parent.children).reverse();
+
+  // Re-append each child to the parent in the reversed order. Because
+  // `appendChild` moves existing nodes, this effectively reorders the DOM
+  // children rather than creating duplicates.
+  children.forEach(child => parent.appendChild(child));
+
+  // Return the parent element after its children have been reordered.
+  return parent;
+}
