@@ -100,3 +100,11 @@ function filler(list,candidates){
   }
   return list;
 }
+
+function dupe(selector){
+  let item = document.querySelector(selector);
+  const clone = item.cloneNode(item);
+  item.parentElement.append(clone);
+  return item.parent;
+}
+
