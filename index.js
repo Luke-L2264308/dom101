@@ -108,3 +108,12 @@ function dupe(selector){
   return item.parent;
 }
 
+function removeAll(selector){
+  let items = document.querySelectorAll(selector);
+  for (let i = 0; i < items.length; i++) {
+    let itemRemove = document.querySelector(selector);
+    items[i].remove(itemRemove);
+    
+  }
+  return items;
+}
