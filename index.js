@@ -117,3 +117,7 @@ function removeAll(selector){
   }
   return items;
 }
+
+function getUserData(){
+  return {name: document.getElementById('username').value, speed: Number(document.getElementById('speed').value), student: document.getElementById('student').checked}
+}
